@@ -1,17 +1,52 @@
 cliexecdir = $(libexecdir)/singularity/cli
 
-dist_cliexec_SCRIPTS = build.exec build.help build.summary \
-	check.exec check.help check.summary \
-	delete.exec delete.help delete.summary \
-	delete-old.exec delete-old.help delete-old.summary \
-	list.exec list.help list.summary \
-	help.exec help.help help.summary \
-	install.exec install.help install.summary \
-	run.exec run.help run.summary \
-	shell.exec shell.help shell.summary \
-	show.exec show.help show.summary \
-	specgen.exec specgen.help specgen.summary \
-	strace.exec strace.help strace.summary \
-	test.exec test.help test.summary
+dist_cliexec_SCRIPTS = action_argparser.sh \
+                    apps.exec \
+                    bootstrap.exec \
+                    build.exec \
+                    check.exec \
+                    create.exec \
+                    exec.exec \
+                    help.exec \
+                    instance.exec \
+                    instance.list.exec \
+                    instance.start.exec \
+                    instance.stop.exec \
+                    image.exec \
+                    image.create.exec \
+                    image.expand.exec \
+                    image.export.exec \
+                    image.import.exec \
+                    inspect.exec  \
+                    mount.exec \
+                    pull.exec \
+                    run.exec \
+                    shell.exec \
+                    test.exec \
+                    selftest.exec
+
+dist_cliexec_DATA = apps.info \
+                    bootstrap.info \
+                    build.info \
+                    check.info \
+                    create.info \
+                    exec.info \
+                    help.info \
+                    instance.info \
+                    instance.list.info \
+                    instance.start.info \
+                    instance.stop.info \
+                    image.info \
+                    image.create.info \
+                    image.expand.info \
+                    image.export.info \
+                    image.import.info \
+                    inspect.info \
+                    mount.info \
+                    pull.info \
+                    run.info \
+                    selftest.info \
+                    shell.info \
+                    test.info
 
 MAINTAINERCLEANFILES = Makefile.in
